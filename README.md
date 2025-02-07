@@ -1,6 +1,6 @@
-```
 This is an alternative version of Ghost's Ruby theme, which added an "archive" page that shows a list of all articles grouped by their tags. To enable the archive page, simply create a new page named "archive", and the engine will render the page using the template `page-archive.hbs` automatically. This rely on Ghost's behavior of choosing template -- it will take `page-xxx.hbs` if it exist, where xxx is the name of the page.
-```
+
+---
 
 # Ruby
 
