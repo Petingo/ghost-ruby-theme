@@ -1,0 +1,32 @@
+{{!< default}}
+
+<main class="site-main">
+
+    {{#post}}
+    <article class="gh-article {{post_class}}">
+
+        <div class="gh-content gh-canvas">
+            {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+            {{#foreach tags}}
+                <a href='{{ url }}' style="text-decoration-line: none;">
+                  <h3>#{{ name }} <small>({{count.posts}})</small></h3>
+                </a>
+                <ul>
+                    {{#get "posts" filter="tag:{{slug}}"}}
+                    {{#foreach posts}}
+                        <li>
+                            <a href="{{url}}" style="margin-top: 2px;">{{title}}</a>
+                        </li>
+                    {{/foreach}}
+                    {{/get}}
+                </ul>
+                
+
+            {{/foreach}}
+            {{/get}}
+        </div>
+
+    </article>
+    {{/post}}
+
+</main>
